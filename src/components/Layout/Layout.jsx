@@ -3,11 +3,11 @@ import { CookiesProvider, useCookies } from 'react-cookie';
 import { CookiesContextProvider } from '../../contexts/CookiesContext';
 import { ImageContext } from '../../contexts/ImageContext';
 import { imageReducer } from '../../reducers/imageReducer';
+import AnalyticsService from '../../services/AnalyticsService';
 import CookiesModal from '../CookiesModal';
 import Cursor from '../Cursor/Cursor';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
-import AnalyticsService from '../../services/analytics';
 
 const Layout = ({ children }) => {
   const [cookies] = useCookies(['technical']);
