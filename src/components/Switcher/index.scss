@@ -1,0 +1,77 @@
+.theme-switcher {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 3.875rem;
+  height: 1.875rem;
+  border-width: 0.125rem;
+  border-style: solid;
+  cursor: pointer;
+  -webkit-transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease;
+
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .theme-switcher-slider {
+    position: absolute;
+    pointer-events: none;
+    top: -0.0625rem;
+    left: -0.0625rem;
+    right: -0.0625rem;
+    bottom: -0.0625rem;
+    &::after {
+      top: 0;
+      left: 0;
+      width: 1.875rem;
+      bottom: 0;
+      content: "";
+      background-color: black;
+      position: absolute;
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+      transition: transform 0.3s ease, background-color 0.3s ease, -webkit-transform 0.3s ease;
+    }
+  }
+
+  input:checked + .theme-switcher-slider::after {
+    -webkit-transform: translateX(1.875rem);
+    transform: translateX(1.875rem);
+  }
+  .theme-switcher-icon {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 2;
+    -webkit-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+    &.moon {
+      right: 0.42rem;
+      width: 1rem;
+      height: 1rem;
+      svg {
+        vertical-align: top;
+      }
+    }
+    &.sun {
+      width: 1rem;
+      height: 1rem;
+      left: 0.4rem;
+      svg {
+        vertical-align: top;
+      }
+    }
+  }
+}
+
+.dark {
+  .theme-switcher {
+    .theme-switcher-slider ::after {
+      background-color: white;
+    }
+  }
+}

@@ -1,0 +1,95 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.was-validated .form-control:valid,
+.form-control.is-valid {
+  border-color: #ced4da;
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGhlaWdodD0iNTEycHgiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiB3aWR0aD0iNTEycHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+CjwhW0NEQVRBWwoJLnN0MHtkaXNwbGF5OmlubGluZTt9Cgkuc3Qxe2ZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6MTY7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjEwO30KCS5zdDJ7ZGlzcGxheTpub25lO30KXV0+Cjwvc3R5bGU+PGcgaWQ9ImNoZWNrIj48cG9seWxpbmUgY2xhc3M9InN0MSIgcG9pbnRzPSI0OC41LDI1NSAxODUuNSwzOTIgNDU2LDEyMS41ICAiLz48L2c+PGcgY2xhc3M9InN0MiIgaWQ9ImV4cGFuZGVkIj48ZyBjbGFzcz0ic3QwIj48cGF0aCBkPSJNMTg1LjUsNDAwYy0yLjA0OCwwLTQuMDk1LTAuNzgxLTUuNjU3LTIuMzQzbC0xMzctMTM3Yy0zLjEyNC0zLjEyNS0zLjEyNC04LjE5LDAtMTEuMzE0czguMTg5LTMuMTI0LDExLjMxMywwICAgIEwxODUuNSwzODAuNjg3bDI2NC44NDMtMjY0Ljg0M2MzLjEyNS0zLjEyNCw4LjE4OS0zLjEyNCwxMS4zMTQsMGMzLjEyNCwzLjEyNCwzLjEyNCw4LjE4OSwwLDExLjMxM2wtMjcwLjUwMSwyNzAuNSAgICBDMTg5LjU5NSwzOTkuMjE5LDE4Ny41NDcsNDAwLDE4NS41LDQwMHoiLz48L2c+PC9nPjwvc3ZnPg==") !important;
+  padding-right: calc(1.5em + 0.75rem);
+  background-repeat: no-repeat;
+  background-position: right calc(0.375em + 0.1875rem) center;
+  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+
+.was-validated .form-control:invalid,
+.form-control.is-invalid {
+  background-image: none !important;
+}
+
+select,
+select.form-control.is-invalid {
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDUwIDUwIiBoZWlnaHQ9IjUwcHgiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA1MCA1MCIgd2lkdGg9IjUwcHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxyZWN0IGZpbGw9Im5vbmUiIGhlaWdodD0iNTAiIHdpZHRoPSI1MCIvPjxwb2x5Z29uIHBvaW50cz0iNDcuMjUsMTUgNDUuMTY0LDEyLjkxNCAyNSwzMy4wNzggNC44MzYsMTIuOTE0IDIuNzUsMTUgMjUsMzcuMjUgIi8+PC9zdmc+") !important;
+  padding-right: calc(1.5em + 0.75rem);
+  background-repeat: no-repeat;
+  background-position: right calc(0.375em + 0.1875rem) center;
+  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+
+.form-group input,
+.form-control {
+  border: none;
+  border-bottom: 1px solid #ced4da;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+select {
+  background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDUwIDUwIiBoZWlnaHQ9IjUwcHgiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA1MCA1MCIgd2lkdGg9IjUwcHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxyZWN0IGZpbGw9Im5vbmUiIGhlaWdodD0iNTAiIHdpZHRoPSI1MCIvPjxwb2x5Z29uIHBvaW50cz0iNDcuMjUsMTUgNDUuMTY0LDEyLjkxNCAyNSwzMy4wNzggNC44MzYsMTIuOTE0IDIuNzUsMTUgMjUsMzcuMjUgIi8+PC9zdmc+")
+    no-repeat 95% 50%;
+  background-size: 13px;
+}
+.form-group {
+  position: relative;
+  margin-bottom: 1rem;
+  margin-top: 1.3rem;
+}
+
+.form-group label {
+  font-size: 1rem;
+  position: absolute;
+  top: 0.3rem;
+  transform-origin: top left;
+  pointer-events: none;
+}
+
+label,
+input {
+  transition: all 0.2s ease-in-out;
+  touch-action: manipulation;
+}
+
+::-webkit-input-placeholder {
+  opacity: 0 !important;
+  transition: inherit !important;
+}
+
+input:focus::-webkit-input-placeholder {
+  opacity: 0 !important;
+}
+
+input:not(:placeholder-shown) + label,
+input:focus + label,
+select:not([value=""]):valid + label,
+input:-webkit-autofill + label {
+  transform: translateY(-1.75rem) scale(0.8);
+  cursor: pointer;
+}
+
+.custom-control-label {
+  transform: translateY(0) scale(1) !important;
+}
+
+.custom-control-label::before {
+  top: 0.45rem;
+}
+.custom-control-label::after {
+  top: 0.45rem;
+}

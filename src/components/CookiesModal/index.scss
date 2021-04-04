@@ -1,0 +1,22 @@
+.modal-cookies-form {
+  .modal-content {
+    min-height: 88vh;
+    max-height: 570px;
+  }
+  .modal-body {
+    display: flex;
+    flex-direction: column;
+  }
+  .flex-1 {
+    flex: 1 1 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-cookies-form {
+    .modal-content {
+      min-height: 75vh;
+      max-height: auto;
+    }
+  }
+}

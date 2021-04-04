@@ -1,0 +1,45 @@
+@import "./partials/variables";
+@import "~bootstrap/scss/bootstrap";
+@import "./partials/typography";
+@import "./partials/fonts";
+@import "./partials/button";
+@import "./partials/form";
+@import "../components/Header/index.scss";
+@import "../components/Cursor/index.scss";
+@import "../components/Switcher/index.scss";
+@import "../components/Footer/index.scss";
+@import "../components/GeneratorForm/index.scss";
+@import "../components/PreviewBanner/index.scss";
+
+html,
+body,
+#__next,
+#root {
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+  cursor: none;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.hoverable {
+  cursor: none;
+}
+input:focus,
+input:visited,
+input:active {
+  outline: none !important;
+}
+
+.dark {
+  .icon {
+    svg {
+      fill: white;
+    }
+  }
+}

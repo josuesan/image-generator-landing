@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "noto";
+  src: url("../fonts/noto/NotoSansJP-Regular.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "noto";
+  src: url("../fonts/noto/NotoSansJP-Light.otf");
+  font-weight: lighter;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "noto";
+  src: url("../fonts/noto/NotoSansJP-Bold.otf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+:root {
+  --font-regular: "noto";
+}

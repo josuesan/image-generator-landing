@@ -1,0 +1,145 @@
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+// Color system
+
+$white: #fff !default;
+$gray-100: #eeeeee !default;
+$gray-200: #f0f3fa !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #cccccc !default;
+$gray-500: #a2a2a2 !default;
+$gray-600: #545454 !default;
+$gray-700: #495057 !default;
+$gray-800: #333333 !default;
+$gray-900: #5f616d !default;
+$black: #000 !default;
+
+$grays: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$grays: map-merge(
+  (
+    "100": $gray-100,
+    "200": $gray-200,
+    "300": $gray-300,
+    "400": $gray-400,
+    "500": $gray-500,
+    "600": $gray-600,
+    "700": $gray-700,
+    "800": $gray-800,
+    "900": $gray-900,
+  ),
+  $grays
+);
+
+$orange: #e16411 !default;
+$red: #dc3545 !default;
+$yellow: #ffc107 !default;
+$green: #28a745 !default;
+$cyan: #17a2b8 !default;
+
+$gray3-light: #f0f3fa !default;
+$gray2-light: #5f616d !default;
+$gray-light: #f8f9fe !default;
+$base-light: black !default;
+$background-light: white !default;
+$accent-light: #6f717e !default;
+
+$gray3-dark: #252b43 !default;
+$gray2-dark: #8088ad !default;
+$gray-dark: #1d2029 !default;
+$base-dark: white !default;
+$background-dark: #1d2029 !default;
+$accent-dark: #8088ad !default;
+
+$colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$colors: map-merge(
+  (
+    "orange": $orange,
+    "red": $red,
+    "yellow": $yellow,
+    "green": $green,
+    "cyan": $cyan,
+    "white": $white,
+  ),
+  $colors
+);
+
+$primary: $orange !default;
+$secondary: #86929e !default;
+$success: $green !default;
+$info: $cyan !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$light: $gray-100 !default;
+$dark: $gray-800 !default;
+
+$theme-colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+  (
+    "primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "info": $info,
+    "warning": $warning,
+    "danger": $danger,
+    "light": $light,
+    "dark": $dark,
+    "orange": $orange,
+    "red": $red,
+    "yellow": $yellow,
+    "green": $green,
+    "cyan": $cyan,
+    "white": $white,
+    "black": $black,
+    "gray-200": $gray-200,
+    "gray-600": $gray-600,
+    "gray3-light": $gray3-light,
+    "gray2-light": $gray2-light,
+    "gray-light": $gray-light,
+    "base-light": $base-light,
+    "background-light": $background-light,
+    "accent-light": $accent-light,
+    "gray3-dark": $gray3-dark,
+    "gray2-dark": $gray2-dark,
+    "gray-dark": $gray-dark,
+    "base-dark": $base-dark,
+    "background-dark": $background-dark,
+    "accent-dark": $accent-dark,
+  ),
+  $theme-colors
+);
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1920px,
+) !default;
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1400px,
+) !default;
+
+$font-family-sans-serif: "dwa", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace: "dwa", "Courier New", monospace !default;
+$font-family-base: $font-family-sans-serif !default;
