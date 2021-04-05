@@ -31,8 +31,7 @@ const GeneratorForm = () => {
       console.log(error);
     }
   };
-  console.log('image', image);
-  console.log('observable de fontColor', fontColor);
+
   return (
     <Container className="mt-3 pt-3 mb-5">
       <Form onSubmit={handleSubmit(onSubmit)} autoComplete="off">
@@ -40,17 +39,19 @@ const GeneratorForm = () => {
           <Col xs="12" md="4">
             <Form.Group>
               <Form.Control
-                name="width"
                 type="text"
                 placeholder="Width"
                 isInvalid={!!errors.width}
                 defaultValue={image.width}
-                ref={register({
-                  required: 'Required',
-                  min: 0,
-                  max: 3000,
-                  validate: (e) => !isNaN(e)
-                })}
+                {...register(
+                  'width',
+                  {
+                    required: 'Required',
+                    min: 0,
+                    max: 3000,
+                    validate: (e) => !isNaN(e)
+                  })
+                }
               />
               <Form.Label className="text-accent-light bold">
                 Width
@@ -66,17 +67,19 @@ const GeneratorForm = () => {
           <Col xs="12" md="4">
             <Form.Group>
               <Form.Control
-                name="height"
                 type="text"
                 placeholder="Height"
                 isInvalid={!!errors.height}
                 defaultValue={image.height}
-                ref={register({
-                  required: 'Required',
-                  min: 0,
-                  max: 3000,
-                  validate: (e) => !isNaN(e)
-                })}
+                {...register(
+                  'height',
+                  {
+                    required: 'Required',
+                    min: 0,
+                    max: 3000,
+                    validate: (e) => !isNaN(e)
+                  })
+                }
               />
               <Form.Label className="text-accent-light bold">
                 Height
@@ -92,13 +95,15 @@ const GeneratorForm = () => {
           <Col xs="12" md="4">
             <Form.Group>
               <Form.Control
-                name="format"
                 as="select"
                 placeholder="Format"
                 isInvalid={!!errors.format}
-                ref={register({
-                  required: 'Required',
-                })}
+                {...register(
+                  'format',
+                  {
+                    required: 'Required',
+                  })
+                }
               >
                 <option value="png">PNG</option>
                 <option value="jpg">JPG</option>
@@ -119,15 +124,17 @@ const GeneratorForm = () => {
           <Col xs="12" md="9">
             <Form.Group>
               <Form.Control
-                name="text"
                 type="text"
                 placeholder="Text"
                 defaultValue={image.text}
                 isInvalid={!!errors.text}
-                ref={register({
-                  min: 2,
-                  max: 250
-                })}
+                {...register(
+                  'text',
+                  {
+                    min: 2,
+                    max: 250
+                  })
+                }
               />
               <Form.Label className="text-accent-light bold">
                 Text
@@ -143,16 +150,18 @@ const GeneratorForm = () => {
           <Col xs="12" md="3">
             <Form.Group>
               <Form.Control
-                name="fontSize"
                 type="text"
                 placeholder="Font Size"
                 isInvalid={!!errors.fontSize}
                 defaultValue={image.fontSize}
-                ref={register({
-                  min: 0,
-                  max: 120,
-                  validate: (e) => watch('text') ? e !== '' && !isNaN(e) : !isNaN(e)
-                })}
+                {...register(
+                  'fontSize',
+                  {
+                    min: 0,
+                    max: 120,
+                    validate: (e) => watch('text') ? e !== '' && !isNaN(e) : !isNaN(e)
+                  })
+                }
               />
               <Form.Label className="text-accent-light bold">
                 Font Size
@@ -171,15 +180,17 @@ const GeneratorForm = () => {
             <Form.Group className="color-picker">
               <span>{fontColor}</span>
               <Form.Control
-                name="fontColor"
-                type="text"
+                type="color"
                 placeholder="Font Color"
                 className="hoverable"
                 isInvalid={!!errors.fontColor}
                 defaultValue={image.fontColor}
-                ref={register({
-                  pattern: /^#[A-Fa-f0-9]{6}/,
-                })}
+                {...register(
+                  'fontColor',
+                  {
+                    pattern: /^#[A-Fa-f0-9]{6}/,
+                  })
+                }
               />
               <Form.Label className="text-accent-light bold">
                 Font Color
@@ -196,16 +207,18 @@ const GeneratorForm = () => {
             <Form.Group className="color-picker">
               <span>{bgColor}</span>
               <Form.Control
-                name="bgColor"
                 type="color"
                 placeholder="Background Color"
                 className="hoverable"
                 isInvalid={!!errors.bgColor}
                 defaultValue={image.bgColor}
-                ref={register({
-                  required: 'Required',
-                  pattern: /^#[A-Fa-f0-9]{6}/
-                })}
+                {...register(
+                  'bgColor',
+                  {
+                    required: 'Required',
+                    pattern: /^#[A-Fa-f0-9]{6}/
+                  })
+                }
               />
               <Form.Label className="text-accent-light bold">
                 Background Color

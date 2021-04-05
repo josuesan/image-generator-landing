@@ -2175,10 +2175,10 @@ react-ga@^3.3.0:
   resolved "https://registry.yarnpkg.com/react-ga/-/react-ga-3.3.0.tgz#c91f407198adcb3b49e2bc5c12b3fe460039b3ca"
   integrity sha512-o8RScHj6Lb8cwy3GMrVH6NJvL+y0zpJvKtc0+wmH7Bt23rszJmnqEQxRbyrqUzk9DTJIHoP42bfO5rswC9SWBQ==
 
-react-hook-form@7.0.0-beta.11:
-  version "7.0.0-beta.11"
-  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.0.0-beta.11.tgz#27b97703b0ac446182d03137ac820c1998562f9f"
-  integrity sha512-q2C2ScgaOsM38m3fyppRpaLmfRMHezPRQJnujwfaiCaPoq6anu/lfsODZz6Y68BbtalhwPbbInKQxrz6FJfq/w==
+react-hook-form@^7.0.1:
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.0.1.tgz#faa8ee1303f29dbe36461bf4dfcf0eeeea5e99b7"
+  integrity sha512-wZLCYS9aVlcEsa0QbPi6UpaaXxXr/N2JI8gq3XGvtrYOjoImEH9KxdZ3TW0PzRCSSGh762fxyN+WHcpBJQz1Mw==
 
 react-is@16.13.1, react-is@^16.3.2, react-is@^16.7.0, react-is@^16.8.1:
   version "16.13.1"
