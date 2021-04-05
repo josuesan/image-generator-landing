@@ -5,15 +5,7 @@ import { Moon, Sun } from '../../constants/icons';
 const Switcher = () => {
   const { theme, setTheme } = useTheme();
 
-  // const changeAllClass = () => {
-  //   $([".light [class*='-light']", ".dark [class*='-dark']"]).each((i, ele) => {
-  //     $(ele).toggleClass('bg-light bg-dark')
-  //     $(ele).toggleClass('text-light text-dark')
-  //     $(ele).toggleClass('navbar-light navbar-dark')
-  //   });
-  // }
   const handleChangeAllClass = (themeColor) => {
-    console.log('change class:', themeColor);
     if (themeColor === 'light') {
       document.querySelectorAll("[class*='-dark']").forEach((elem) => {
         // CHANGE TEXT COLOR
@@ -37,6 +29,18 @@ const Switcher = () => {
         if (elem.classList.contains('text-background-dark')) {
           elem.classList.remove('text-background-dark');
           elem.classList.add('text-background-light');
+        }
+        if (elem.classList.contains('text-background2-dark')) {
+          elem.classList.remove('text-background2-dark');
+          elem.classList.add('text-background2-light');
+        }
+        if (elem.classList.contains('text-inverted-dark')) {
+          elem.classList.remove('text-inverted-dark');
+          elem.classList.add('text-inverted-light');
+        }
+        if (elem.classList.contains('text-base-inv-dark')) {
+          elem.classList.remove('text-base-inv-dark');
+          elem.classList.add('text-base-inv-light');
         }
         if (elem.classList.contains('text-accent-dark')) {
           elem.classList.remove('text-accent-dark');
@@ -64,6 +68,18 @@ const Switcher = () => {
           elem.classList.remove('bg-background-dark');
           elem.classList.add('bg-background-light');
         }
+        if (elem.classList.contains('bg-background2-dark')) {
+          elem.classList.remove('bg-background2-dark');
+          elem.classList.add('bg-background2-light');
+        }
+        if (elem.classList.contains('bg-inverted-dark')) {
+          elem.classList.remove('bg-inverted-dark');
+          elem.classList.add('bg-inverted-light');
+        }
+        if (elem.classList.contains('bg-base-inv-dark')) {
+          elem.classList.remove('bg-base-inv-dark');
+          elem.classList.add('bg-base-inv-light');
+        }
         if (elem.classList.contains('bg-accent-dark')) {
           elem.classList.remove('bg-accent-dark');
           elem.classList.add('bg-accent-light');
@@ -72,8 +88,6 @@ const Switcher = () => {
     }
     else {
       document.querySelectorAll("[class*='-light']").forEach((elem) => {
-        // elem.classList.remove('bg-light');
-        // elem.classList.add('bg-dark');
 
         //CHANGE TEXT COLOR
         if (elem.classList.contains('text-gray3-light')) {
@@ -97,6 +111,18 @@ const Switcher = () => {
         if (elem.classList.contains('text-background-light')) {
           elem.classList.remove('text-background-light');
           elem.classList.add('text-background-dark');
+        }
+        if (elem.classList.contains('text-background2-light')) {
+          elem.classList.remove('text-background2-light');
+          elem.classList.add('text-background2-dark');
+        }
+        if (elem.classList.contains('text-inverted-light')) {
+          elem.classList.remove('text-inverted-light');
+          elem.classList.add('text-inverted-dark');
+        }
+        if (elem.classList.contains('text-base-inv-light')) {
+          elem.classList.remove('text-base-inv-light');
+          elem.classList.add('text-base-inv-dark');
         }
         if (elem.classList.contains('text-accent-light')) {
           elem.classList.remove('text-accent-light');
@@ -125,6 +151,18 @@ const Switcher = () => {
           elem.classList.remove('bg-background-light');
           elem.classList.add('bg-background-dark');
         }
+        if (elem.classList.contains('bg-background2-light')) {
+          elem.classList.remove('bg-background2-light');
+          elem.classList.add('bg-background2-dark');
+        }
+        if (elem.classList.contains('bg-inverted-light')) {
+          elem.classList.remove('bg-inverted-light');
+          elem.classList.add('bg-inverted-dark');
+        }
+        if (elem.classList.contains('bg-base-inv-light')) {
+          elem.classList.remove('bg-base-inv-light');
+          elem.classList.add('bg-base-inv-dark');
+        }
         if (elem.classList.contains('bg-accent-light')) {
           elem.classList.remove('bg-accent-light');
           elem.classList.add('bg-accent-dark');
@@ -151,7 +189,7 @@ const Switcher = () => {
   }, []);
 
   return (
-    <label className="theme-switcher mb-0 border-gray3-light" htmlFor="color-theme">
+    <label className="theme-switcher mb-0" htmlFor="color-theme">
       <input className="color-theme" defaultChecked={theme === 'dark'} type="checkbox" name="color-theme" id="color-theme" onChange={handleChangeTheme} />
       <span className="theme-switcher-slider">
         <span className="theme-switcher-icon sun">

@@ -6,25 +6,6 @@
   height: 5.375rem;
   transition: transform 0.5s, opacity 0.5s, color 0.5s;
 
-  .header-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transform: translate3d(0, calc(-100% - 1.1875rem), 0);
-    transition: transform 0.5s;
-  }
-
-  .nav-link {
-    position: relative;
-    z-index: 2;
-    color: #354554;
-    font-weight: 500;
-    padding: 0.625rem 0.9375rem;
-    margin: 0 0.625rem;
-    overflow: hidden;
-    transition: color 0.5s;
-  }
   nav .cta {
     transition: opacity 0.5s;
   }
@@ -61,22 +42,6 @@
       transform: translateZ(0);
     }
   }
-
-  // .menu-toggle {
-  //   width: 2.75rem;
-  //   height: 2.75rem;
-  //   background-color: transparent;
-  //   flex-direction: column;
-  //   justify-content: center;
-  //   color: inherit;
-  //   &.is-toggled {
-  //     .line {
-  //       &:first-child {
-  //         transform: translate3d(0, 0.25rem, 0) rotate(45deg);
-  //       }
-  //     }
-  //   }
-  // }
 }
 
 .menu {
@@ -146,4 +111,14 @@
 .menu-toggle.is-toggled span:nth-child(3) {
   top: 9px;
   transform: rotate(-135deg);
+}
+
+.shadow-box {
+  box-shadow: 0 3px 6px rgba(50, 50, 50, 0.3);
+}
+
+.dark {
+  .shadow-box {
+    box-shadow: 0 3px 6px rgba(50, 50, 50, 0.6);
+  }
 }

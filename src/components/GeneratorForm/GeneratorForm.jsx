@@ -1,18 +1,20 @@
-import React, { useContext } from 'react'
-import { Col, Container, Form, Row } from 'react-bootstrap'
+import React, { useContext } from 'react';
+import { Col, Container, Form, Row } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { ImageContext } from '../../contexts/ImageContext';
 import GeneratorImageService from '../../services/GeneratorImageService';
 import { types } from '../../types/types';
 
 const GeneratorForm = () => {
-  const { dispatch } = useContext(ImageContext);
+  const { image, dispatch } = useContext(ImageContext);
 
-  const {
-    register, errors, handleSubmit, watch
-  } = useForm();
+  const { register, errors, handleSubmit, watch } = useForm();
+
+  const fontColor = watch('fontColor');
+  const bgColor = watch('bgColor');
 
   const onSubmit = async (data) => {
+    console.log('Submit', data);
     try {
       const response = await GeneratorImageService.create(data);
       dispatch({
@@ -24,15 +26,17 @@ const GeneratorForm = () => {
           format: data.format,
         }
       });
+      document.getElementById("previewer").scrollIntoView();
     } catch (error) {
       console.log(error);
     }
   };
-
+  console.log('image', image);
+  console.log('observable de fontColor', fontColor);
   return (
     <Container className="mt-3 pt-3 mb-5">
       <Form onSubmit={handleSubmit(onSubmit)} autoComplete="off">
-        <Row className="justify-content-start align-items-center pb-2">
+        <Row className="justify-content-start align-items-center pb-0 pb-md-2">
           <Col xs="12" md="4">
             <Form.Group>
               <Form.Control
@@ -40,6 +44,7 @@ const GeneratorForm = () => {
                 type="text"
                 placeholder="Width"
                 isInvalid={!!errors.width}
+                defaultValue={image.width}
                 ref={register({
                   required: 'Required',
                   min: 0,
@@ -47,7 +52,7 @@ const GeneratorForm = () => {
                   validate: (e) => !isNaN(e)
                 })}
               />
-              <Form.Label className="text-accent-light">
+              <Form.Label className="text-accent-light bold">
                 Width
               </Form.Label>
               {errors.width
@@ -65,6 +70,7 @@ const GeneratorForm = () => {
                 type="text"
                 placeholder="Height"
                 isInvalid={!!errors.height}
+                defaultValue={image.height}
                 ref={register({
                   required: 'Required',
                   min: 0,
@@ -72,7 +78,7 @@ const GeneratorForm = () => {
                   validate: (e) => !isNaN(e)
                 })}
               />
-              <Form.Label className="text-accent-light">
+              <Form.Label className="text-accent-light bold">
                 Height
               </Form.Label>
               {errors.height
@@ -97,7 +103,7 @@ const GeneratorForm = () => {
                 <option value="png">PNG</option>
                 <option value="jpg">JPG</option>
               </Form.Control>
-              <Form.Label className="text-accent-light">
+              <Form.Label className="text-accent-light bold">
                 Format
               </Form.Label>
               {errors.format
@@ -109,20 +115,21 @@ const GeneratorForm = () => {
             </Form.Group>
           </Col>
         </Row>
-        <Row className="justify-content-start align-items-center py-2">
+        <Row className="justify-content-start align-items-center py-0 py-md-2">
           <Col xs="12" md="9">
             <Form.Group>
               <Form.Control
                 name="text"
                 type="text"
                 placeholder="Text"
+                defaultValue={image.text}
                 isInvalid={!!errors.text}
                 ref={register({
                   min: 2,
                   max: 250
                 })}
               />
-              <Form.Label className="text-accent-light">
+              <Form.Label className="text-accent-light bold">
                 Text
               </Form.Label>
               {errors.text
@@ -140,13 +147,14 @@ const GeneratorForm = () => {
                 type="text"
                 placeholder="Font Size"
                 isInvalid={!!errors.fontSize}
+                defaultValue={image.fontSize}
                 ref={register({
                   min: 0,
                   max: 120,
                   validate: (e) => watch('text') ? e !== '' && !isNaN(e) : !isNaN(e)
                 })}
               />
-              <Form.Label className="text-accent-light">
+              <Form.Label className="text-accent-light bold">
                 Font Size
               </Form.Label>
               {errors.fontSize
@@ -158,22 +166,22 @@ const GeneratorForm = () => {
             </Form.Group>
           </Col>
         </Row>
-        <Row className="justify-content-start align-items-center pt-2">
+        <Row className="justify-content-start align-items-center pt-0 pt-md-2">
           <Col xs="12" md="4">
-            <Form.Group>
+            <Form.Group className="color-picker">
+              <span>{fontColor}</span>
               <Form.Control
                 name="fontColor"
-                type="color"
+                type="text"
                 placeholder="Font Color"
                 className="hoverable"
                 isInvalid={!!errors.fontColor}
-                defaultValue="#ffffff"
+                defaultValue={image.fontColor}
                 ref={register({
                   pattern: /^#[A-Fa-f0-9]{6}/,
-                  validate: (e) => watch('text') ? e !== '' : true
                 })}
               />
-              <Form.Label className="text-accent-light">
+              <Form.Label className="text-accent-light bold">
                 Font Color
               </Form.Label>
               {errors.fontColor
@@ -185,20 +193,21 @@ const GeneratorForm = () => {
             </Form.Group>
           </Col>
           <Col xs="12" md="4">
-            <Form.Group>
+            <Form.Group className="color-picker">
+              <span>{bgColor}</span>
               <Form.Control
                 name="bgColor"
                 type="color"
                 placeholder="Background Color"
                 className="hoverable"
                 isInvalid={!!errors.bgColor}
-                defaultValue="#000000"
+                defaultValue={image.bgColor}
                 ref={register({
                   required: 'Required',
                   pattern: /^#[A-Fa-f0-9]{6}/
                 })}
               />
-              <Form.Label className="text-accent-light">
+              <Form.Label className="text-accent-light bold">
                 Background Color
               </Form.Label>
               {errors.bgColor
@@ -210,8 +219,8 @@ const GeneratorForm = () => {
             </Form.Group>
           </Col>
           <Col xs="12" md="4">
-            <div className="d-flex justify-content-center align-items-center">
-              <button className="btn btn-5 btn-5a text-background-light bg-base-light" type="submit">
+            <div className="d-flex justify-content-center align-items-center extra-p mt-5 mt-md-0">
+              <button className="btn btn-5 btn-5a bold text-base-inv-light bg-inverted-light" type="submit">
                 <span>Generate Image</span>
               </button>
             </div>

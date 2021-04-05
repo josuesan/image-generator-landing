@@ -16,6 +16,10 @@ const Layout = ({ children }) => {
     width: 400,
     height: 400,
     format: 'png',
+    fontColor: '#FFFFFF',
+    bgColor: '#000000',
+    fontSize: '18',
+    text: '400 x 400',
   });
   const initAnalitics = () => {
     AnalyticsService.initialize({
@@ -30,12 +34,12 @@ const Layout = ({ children }) => {
     }
   }, [cookies]);
   return (
-    <div className="layout text-base-light bg-background-light">
+    <div className="layout text-base-light bg-background2-light">
       <CookiesProvider>
         <CookiesContextProvider>
           <ImageContext.Provider value={{ image, dispatch }}>
             <Header />
-            <main className="py-5 mt-5">
+            <main className="py-5 mt-4">
               {children}
             </main>
             <Footer />

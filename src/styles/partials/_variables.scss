@@ -40,19 +40,40 @@ $yellow: #ffc107 !default;
 $green: #28a745 !default;
 $cyan: #17a2b8 !default;
 
-$gray3-light: #f0f3fa !default;
-$gray2-light: #5f616d !default;
-$gray-light: #f8f9fe !default;
-$base-light: black !default;
-$background-light: white !default;
-$accent-light: #6f717e !default;
+$gray3-light: #eef0f1 !default;
+$gray3-dark: #0d1219 !default;
 
-$gray3-dark: #252b43 !default;
-$gray2-dark: #8088ad !default;
-$gray-dark: #1d2029 !default;
-$base-dark: white !default;
-$background-dark: #1d2029 !default;
-$accent-dark: #8088ad !default;
+//TITLES
+$accent-light: #747679 !default;
+$accent-dark: #e7e9ed !default;
+
+//BG INPUT
+$gray2-light: #f2f2f2 !default;
+$gray2-dark: #3a3b3c !default;
+
+// TEXT INPUT
+$gray-light: #050505 !default;
+$gray-dark: #d9e6eb !default;
+
+//BASE
+$base-light: #202428 !default;
+$base-dark: #e4e6eb !default;
+
+// PRIMARY BACKGROUND
+$background-light: white !default;
+$background-dark: #242526 !default;
+
+// SECONDARY BACKGROUND
+$background2-light: #f0f2f5 !default;
+$background2-dark: #18191a !default;
+
+// INVERTED
+$inverted-light: #18191a !default;
+$inverted-dark: #f0f2f5 !default;
+
+//BASE INVERTED
+$base-inv-light: #e4e6eb !default;
+$base-inv-dark: #202428 !default;
 
 $colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -102,14 +123,20 @@ $theme-colors: map-merge(
     "gray2-light": $gray2-light,
     "gray-light": $gray-light,
     "base-light": $base-light,
-    "background-light": $background-light,
     "accent-light": $accent-light,
     "gray3-dark": $gray3-dark,
     "gray2-dark": $gray2-dark,
     "gray-dark": $gray-dark,
     "base-dark": $base-dark,
-    "background-dark": $background-dark,
     "accent-dark": $accent-dark,
+    "background-light": $background-light,
+    "background-dark": $background-dark,
+    "background2-light": $background2-light,
+    "background2-dark": $background2-dark,
+    "inverted-light": $inverted-light,
+    "inverted-dark": $inverted-dark,
+    "base-inv-light": $base-inv-light,
+    "base-inv-dark": $base-inv-dark,
   ),
   $theme-colors
 );

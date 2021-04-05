@@ -1,6 +1,7 @@
 import GeneratorForm from '../components/GeneratorForm/GeneratorForm';
 import PreviewBanner from '../components/PreviewBanner/PreviewBanner';
 import { NextSeo } from 'next-seo';
+import { Card, Col, Container, Row } from 'react-bootstrap';
 
 export default function Home() {
   return (
@@ -27,9 +28,24 @@ export default function Home() {
           cardType: 'summary_large_image',
         }}
       />
-      <h1 className="bold text-center">Online tooling app for image generation</h1>
-      <PreviewBanner />
-      <GeneratorForm />
+      <Container fluid className="banner bg-inverted-light">
+        <Row>
+          <Col xs="12">
+            <h1 className="bold text-center mb-5 text-base-inv-light">Online tooling for image generation</h1>
+            <h2 className="bold text-center mb-0 text-base-inv-light" id="previewer">Image previewer</h2>
+          </Col>
+        </Row>
+      </Container>
+      <Container>
+        <Row className="justify-content-center">
+          <Col xs="12" md="9">
+            <Card className="card-form bg-gray2-light" >
+              <PreviewBanner />
+              <GeneratorForm />
+            </Card>
+          </Col>
+        </Row>
+      </Container>
     </>
   )
 }

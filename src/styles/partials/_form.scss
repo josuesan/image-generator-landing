@@ -12,7 +12,7 @@ input[type="number"] {
 
 .was-validated .form-control:valid,
 .form-control.is-valid {
-  border-color: #ced4da;
+  border-color: $gray-light;
   background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGhlaWdodD0iNTEycHgiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiB3aWR0aD0iNTEycHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+CjwhW0NEQVRBWwoJLnN0MHtkaXNwbGF5OmlubGluZTt9Cgkuc3Qxe2ZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6MTY7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjEwO30KCS5zdDJ7ZGlzcGxheTpub25lO30KXV0+Cjwvc3R5bGU+PGcgaWQ9ImNoZWNrIj48cG9seWxpbmUgY2xhc3M9InN0MSIgcG9pbnRzPSI0OC41LDI1NSAxODUuNSwzOTIgNDU2LDEyMS41ICAiLz48L2c+PGcgY2xhc3M9InN0MiIgaWQ9ImV4cGFuZGVkIj48ZyBjbGFzcz0ic3QwIj48cGF0aCBkPSJNMTg1LjUsNDAwYy0yLjA0OCwwLTQuMDk1LTAuNzgxLTUuNjU3LTIuMzQzbC0xMzctMTM3Yy0zLjEyNC0zLjEyNS0zLjEyNC04LjE5LDAtMTEuMzE0czguMTg5LTMuMTI0LDExLjMxMywwICAgIEwxODUuNSwzODAuNjg3bDI2NC44NDMtMjY0Ljg0M2MzLjEyNS0zLjEyNCw4LjE4OS0zLjEyNCwxMS4zMTQsMGMzLjEyNCwzLjEyNCwzLjEyNCw4LjE4OSwwLDExLjMxM2wtMjcwLjUwMSwyNzAuNSAgICBDMTg5LjU5NSwzOTkuMjE5LDE4Ny41NDcsNDAwLDE4NS41LDQwMHoiLz48L2c+PC9nPjwvc3ZnPg==") !important;
   padding-right: calc(1.5em + 0.75rem);
   background-repeat: no-repeat;
@@ -37,10 +37,11 @@ select.form-control.is-invalid {
 .form-group input,
 .form-control {
   border: none;
-  border-bottom: 1px solid #ced4da;
+  border-bottom: 1px solid $gray-light;
   border-radius: 0;
   -webkit-appearance: none;
 }
+
 select {
   background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDUwIDUwIiBoZWlnaHQ9IjUwcHgiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA1MCA1MCIgd2lkdGg9IjUwcHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxyZWN0IGZpbGw9Im5vbmUiIGhlaWdodD0iNTAiIHdpZHRoPSI1MCIvPjxwb2x5Z29uIHBvaW50cz0iNDcuMjUsMTUgNDUuMTY0LDEyLjkxNCAyNSwzMy4wNzggNC44MzYsMTIuOTE0IDIuNzUsMTUgMjUsMzcuMjUgIi8+PC9zdmc+")
     no-repeat 95% 50%;
@@ -69,6 +70,7 @@ input {
 ::-webkit-input-placeholder {
   opacity: 0 !important;
   transition: inherit !important;
+  color: $gray-light;
 }
 
 input:focus::-webkit-input-placeholder {
@@ -92,4 +94,111 @@ input:-webkit-autofill + label {
 }
 .custom-control-label::after {
   top: 0.45rem;
+}
+
+input:-internal-autofill-selected {
+  background-color: transparent !important;
+  background-image: none !important;
+  color: inherit !important;
+}
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: inherit;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+input,
+select,
+option {
+  background-color: transparent !important;
+  outline: none !important;
+}
+
+input,
+select,
+option {
+  color: $gray-light;
+}
+
+.color-picker {
+  position: relative;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $gray-light;
+  span {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    font-size: 0.7rem;
+    color: $gray-light;
+    backface-visibility: hidden;
+    pointer-events: none;
+    font-weight: bold;
+  }
+}
+
+// INPUT COLOR
+input[type="color"] {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  // width: 36px;
+  width: calc(100% - 60px);
+  height: 25px;
+  border: none !important;
+  padding: 0;
+  outline: none !important;
+  -webkit-appearance: none;
+  box-shadow: none !important;
+  background-color: transparent;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+  outline: none !important;
+  box-shadow: none !important;
+}
+input[type="color"]::-webkit-color-swatch {
+  border: none !important;
+  border-radius: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.dark {
+  .was-validated .form-control:valid,
+  .form-control.is-valid {
+    border-color: $gray-dark;
+  }
+
+  .form-group input,
+  .form-control {
+    border-bottom: 1px solid $gray-dark;
+  }
+  input,
+  select,
+  option {
+    color: $gray-dark;
+  }
+  ::-webkit-input-placeholder {
+    color: $gray-dark;
+  }
+  .color-picker {
+    border-color: $gray-dark;
+    span {
+      color: $gray-dark;
+    }
+  }
+}
+.extra-p {
+  margin-bottom: 16px;
 }

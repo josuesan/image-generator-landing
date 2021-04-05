@@ -8,7 +8,6 @@
 @import "../components/Cursor/index.scss";
 @import "../components/Switcher/index.scss";
 @import "../components/Footer/index.scss";
-@import "../components/GeneratorForm/index.scss";
 @import "../components/PreviewBanner/index.scss";
 
 html,
@@ -32,6 +31,22 @@ a {
   &:hover {
     text-decoration: none !important;
   }
+}
+.banner {
+  padding: 80px 30px 180px 30px;
+}
+.card-form {
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -140px;
+  z-index: 9;
+  padding: 40px 25px 0 25px;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
+}
+#previewer {
+  padding-top: 86px;
+  margin-top: -86px;
 }
 .hoverable {
   cursor: none;
