@@ -38,7 +38,7 @@ export default function Home() {
       </Container>
       <Container>
         <Row className="justify-content-center">
-          <Col xs="12" md="9">
+          <Col xs="12" lg="9">
             <Card className="card-form bg-gray2-light" >
               <PreviewBanner />
               <GeneratorForm />
