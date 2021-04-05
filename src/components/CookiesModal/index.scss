@@ -10,6 +10,10 @@
   .flex-1 {
     flex: 1 1 auto;
   }
+  button {
+    cursor: none !important;
+    pointer-events: none;
+  }
 }
 
 @media (max-width: 768px) {
