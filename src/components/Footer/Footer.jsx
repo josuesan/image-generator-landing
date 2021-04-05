@@ -10,7 +10,7 @@ const Footer = () => {
         <Row className="align-items-center justify-content-center mb-5">
           <Col xs="12">
             <div className="footer-logo">
-              <a className="text-center d-block text-accent-light hoverable" title="Image Generator">
+              <a className="text-center d-block text-accent-light" title="Image Generator">
                 <Logo />
               </a>
             </div>
@@ -24,7 +24,7 @@ const Footer = () => {
             <a href="https://paypal.me/josuesan95" target="_blank" rel="noopener noreferrer" className="pb-1 d-block text-center text-accent-light hoverable" title="Donations">Donations</a>
           </Col>
           <Col xs="12" md="4">
-            <a title="Send me an email" className="d-block text-center icon text-accent-light hoverable" href="mailto:%6a%6f%73%75%65%73%61%6e%2e%64%65%76%40%67%6d%61%69%6c%2e%63%6f%6d">
+            <a title="Send me an email" className="d-block text-center icon text-accent-light" href="mailto:%6a%6f%73%75%65%73%61%6e%2e%64%65%76%40%67%6d%61%69%6c%2e%63%6f%6d">
               <Mail />
             </a>
           </Col>
@@ -37,8 +37,8 @@ const Footer = () => {
         </Row>
         <Row className="justify-content-center">
           <Col xs="12">
-            <p className="text-center text-accent-light hoverable">© Copyright 2021</p>
-            <p className="text-center text-accent-light hoverable devby">
+            <p className="text-center text-accent-light">© Copyright 2021</p>
+            <p className="text-center text-accent-light devby">
               Made by Josue Sanchez, with love
               &nbsp;
               <Heart />

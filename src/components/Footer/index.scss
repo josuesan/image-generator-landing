@@ -13,6 +13,8 @@
   position: absolute;
   display: block;
   transition: transform 0.4s 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  top: 50%;
+  transform: translateY(-50%);
 }
 .footer-logo::before {
   left: 0;
@@ -27,14 +29,14 @@
   .footer-logo::before,
   .footer-logo::after {
     top: 50%;
-    transform: scale(0, 1);
-    margin-top: -0.8125rem;
+    transform: translateY(-50%) scale(0, 1);
+    // margin-top: -0.8125rem;
   }
 }
 
 .footer-logo::before,
 .footer-logo::after {
-  transform: scale(1, 1) !important;
+  transform: translateY(-50%) scale(1, 1) !important;
 }
 
 footer .icon svg {

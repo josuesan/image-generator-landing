@@ -10,9 +10,11 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          <meta charSet="utf-8" />
           <link rel="icon" href="/favicon.ico" />
           <meta name="color-scheme" content="light dark" />
-          <title>Image Generator</title>
+          <meta name="author" content="Josue Sanchez" />
+          <meta name="keywords" content="Image, create, generate, resize, placeholder, fake image, jpeg, png, mockups, free image service, generator, creator, img, desing, development, custom image" />
         </Head>
         <body>
           <Main />

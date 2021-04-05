@@ -44,7 +44,7 @@ const Cursor = () => {
     window.addEventListener('mousemove', onMouseMove);
     document.querySelectorAll('.hoverable').forEach((elem) => {
       elem.addEventListener('mouseenter', onMouseHover);
-      elem.addEventListener('mouseout', onMouseHoverOut);
+      elem.addEventListener('mouseleave', onMouseHoverOut);
     });
   }, []);
 

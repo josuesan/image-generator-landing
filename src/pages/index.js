@@ -6,13 +6,13 @@ export default function Home() {
   return (
     <>
       <NextSeo
-        title="Using More of Config"
-        description="This example uses more of the available config options."
-        canonical="https://www.canonical.ie/"
+        title="Image Generator"
+        description="Image Generator is an online app to create  or generate images completely free and easy to use. You can create placeholder images, which you can use in mockups, or in the development of your applications."
+        canonical="https://image-generator-landing.vercel.app"
         openGraph={{
-          url: 'https://www.url.ie/a',
-          title: 'Open Graph Title',
-          description: 'Open Graph Description',
+          url: 'https://image-generator-landing.vercel.app',
+          title: 'Image Generator',
+          description: 'Image Generator is an online app to create  or generate images completely free and easy to use. You can create placeholder images, which you can use in mockups, or in the development of your applications.',
           images: [
             {
               url: 'https://www.example.ie/og-image-01.jpg',
@@ -20,33 +20,14 @@ export default function Home() {
               height: 600,
               alt: 'Og Image Alt',
             },
-            {
-              url: 'https://www.example.ie/og-image-02.jpg',
-              width: 900,
-              height: 800,
-              alt: 'Og Image Alt Second',
-            },
-            { url: 'https://www.example.ie/og-image-03.jpg' },
-            { url: 'https://www.example.ie/og-image-04.jpg' },
           ],
-          site_name: 'SiteName',
+          site_name: 'Image Generator',
         }}
         twitter={{
-          handle: '@handle',
-          site: '@site',
           cardType: 'summary_large_image',
         }}
-        additionalMetaTags={[{
-          property: 'dc:creator',
-          content: 'Jane Doe'
-        }, {
-          name: 'application-name',
-          content: 'NextSeo'
-        }, {
-          httpEquiv: 'x-ua-compatible',
-          content: 'IE=edge; chrome=1'
-        }]}
       />
+      <h1 className="bold text-center">Online tooling app for image generation</h1>
       <PreviewBanner />
       <GeneratorForm />
     </>

@@ -35,9 +35,9 @@ const Layout = ({ children }) => {
         <CookiesContextProvider>
           <ImageContext.Provider value={{ image, dispatch }}>
             <Header />
-            <div className="py-5 mt-5">
+            <main className="py-5 mt-5">
               {children}
-            </div>
+            </main>
             <Footer />
             <Cursor />
             {!cookies.technical && (
