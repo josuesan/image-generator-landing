@@ -88,46 +88,42 @@ export default function RecommendationsPage() {
   return (
     <>
       <NextSeo
-        title="Using More of Config"
-        description="This example uses more of the available config options."
-        canonical="https://www.canonical.ie/"
+        title="Image Generator"
+        description="Image Generator is an online app to create  or generate images completely free and easy to use. You can create placeholder images, which you can use in mockups, or in the development of your applications."
+        canonical="https://image-generator-landing.vercel.app"
         openGraph={{
-          url: 'https://www.url.ie/a',
-          title: 'Open Graph Title',
-          description: 'Open Graph Description',
+          url: 'https://image-generator-landing.vercel.app',
+          title: 'Image Generator',
+          description: 'Image Generator is an online tooling app to create / generate images completely free and easy to use. You can create placeholder images, which you can use in mockups, or in the development of your applications.',
           images: [
             {
-              url: 'https://www.example.ie/og-image-01.jpg',
-              width: 800,
+              url: 'https://image-generator-landing.vercel.app/opengraph.png',
+              width: 1200,
               height: 600,
-              alt: 'Og Image Alt',
+              alt: 'Image Generator',
             },
             {
-              url: 'https://www.example.ie/og-image-02.jpg',
-              width: 900,
-              height: 800,
-              alt: 'Og Image Alt Second',
+              url: 'https://image-generator-landing.vercel.app/opengraph2.png',
+              width: 1200,
+              height: 600,
+              alt: 'Image Generator',
             },
-            { url: 'https://www.example.ie/og-image-03.jpg' },
-            { url: 'https://www.example.ie/og-image-04.jpg' },
           ],
-          site_name: 'SiteName',
+          site_name: 'Image Generator',
         }}
         twitter={{
-          handle: '@handle',
-          site: '@site',
           cardType: 'summary_large_image',
         }}
       />
-      <Container>
+      <Container className="mt-5">
         <Row>
           <Col xs="12">
-            <h1 className="text-accent-light bold">Recommendations</h1>
-            <p>
+            <h1 className="text-accent-light bold mb-4">Recommendations</h1>
+            <p className="p-lg mb-5">
               The dimensions of the images depend on the amount of space you need to occupy on the screen.
               Header or full screen images will always be much larger than logo images, for example.
               There are no set rules, but as a general rule, you can look at this list of sizes according to the different elements on the screen:
-          </p>
+            </p>
 
             <Table responsive="sm">
               <thead>

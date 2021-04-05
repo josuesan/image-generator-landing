@@ -10,8 +10,8 @@ const GeneratorForm = () => {
 
   const { register, formState: { errors }, handleSubmit, watch } = useForm();
 
-  const fontColor = watch('fontColor');
-  const bgColor = watch('bgColor');
+  const fontColor = watch('fontColor', image.fontColor);
+  const bgColor = watch('bgColor', image.bgColor);
 
   const onSubmit = async (data) => {
     console.log('Submit', data);
@@ -31,7 +31,6 @@ const GeneratorForm = () => {
       console.log(error);
     }
   };
-
   return (
     <Container className="mt-3 pt-3 mb-5">
       <Form onSubmit={handleSubmit(onSubmit)} autoComplete="off">
@@ -178,7 +177,7 @@ const GeneratorForm = () => {
         <Row className="justify-content-start align-items-center pt-0 pt-md-2">
           <Col xs="12" md="4">
             <Form.Group className="color-picker">
-              <span>{fontColor}</span>
+              <span className="text-uppercase">{fontColor}</span>
               <Form.Control
                 type="color"
                 placeholder="Font Color"
@@ -205,7 +204,7 @@ const GeneratorForm = () => {
           </Col>
           <Col xs="12" md="4">
             <Form.Group className="color-picker">
-              <span>{bgColor}</span>
+              <span className="text-uppercase">{bgColor}</span>
               <Form.Control
                 type="color"
                 placeholder="Background Color"

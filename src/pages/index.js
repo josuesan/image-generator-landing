@@ -13,13 +13,19 @@ export default function Home() {
         openGraph={{
           url: 'https://image-generator-landing.vercel.app',
           title: 'Image Generator',
-          description: 'Image Generator is an online app to create  or generate images completely free and easy to use. You can create placeholder images, which you can use in mockups, or in the development of your applications.',
+          description: 'Image Generator is an online tooling app to create / generate images completely free and easy to use. You can create placeholder images, which you can use in mockups, or in the development of your applications.',
           images: [
             {
-              url: 'https://www.example.ie/og-image-01.jpg',
-              width: 800,
+              url: 'https://image-generator-landing.vercel.app/opengraph.png',
+              width: 1200,
               height: 600,
-              alt: 'Og Image Alt',
+              alt: 'Image Generator',
+            },
+            {
+              url: 'https://image-generator-landing.vercel.app/opengraph2.png',
+              width: 1200,
+              height: 600,
+              alt: 'Image Generator',
             },
           ],
           site_name: 'Image Generator',
