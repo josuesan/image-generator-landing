@@ -8,7 +8,7 @@ import { types } from '../../types/types';
 const GeneratorForm = () => {
   const { image, dispatch } = useContext(ImageContext);
 
-  const { register, errors, handleSubmit, watch } = useForm();
+  const { register, formState: { errors }, handleSubmit, watch } = useForm();
 
   const fontColor = watch('fontColor');
   const bgColor = watch('bgColor');
