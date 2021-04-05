@@ -9,18 +9,22 @@ import Cursor from '../Cursor/Cursor';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 
+const initialState = {
+  url: '/fff.png',
+  width: 400,
+  height: 400,
+  format: 'png',
+  fontColor: '#FFFFFF',
+  bgColor: '#000000',
+  fontSize: '18',
+  text: '400 x 400',
+};
+
+const init = () => initialState;
+
 const Layout = ({ children }) => {
   const [cookies] = useCookies(['technical']);
-  const [image, dispatch] = useReducer(imageReducer, {
-    url: '/fff.png',
-    width: 400,
-    height: 400,
-    format: 'png',
-    fontColor: '#FFFFFF',
-    bgColor: '#000000',
-    fontSize: '18',
-    text: '400 x 400',
-  });
+  const [image, dispatch] = useReducer(imageReducer, initialState, init);
   const initAnalitics = () => {
     AnalyticsService.initialize({
       google: process.env.NEXT_PUBLIC_GOOGLE_PIXEL,
