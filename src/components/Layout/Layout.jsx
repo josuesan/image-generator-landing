@@ -10,14 +10,14 @@ import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 
 const initialState = {
-  url: '/fff.png',
-  width: 400,
-  height: 400,
+  url: '/1200X640.png',
+  width: 1200,
+  height: 640,
   format: 'png',
   fontColor: '#FFFFFF',
   bgColor: '#000000',
-  fontSize: '18',
-  text: '400 x 400',
+  fontSize: '120',
+  text: '1200 x 640',
 };
 
 const init = () => initialState;
