@@ -24,8 +24,18 @@ html {
 
 body {
   overflow-x: hidden;
+  cursor: none !important;
 }
-
+p,
+a,
+button,
+span,
+svg,
+select,
+input,
+label {
+  cursor: none !important;
+}
 a {
   text-decoration: none !important;
   &:hover {

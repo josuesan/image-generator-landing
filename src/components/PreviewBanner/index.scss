@@ -2,6 +2,13 @@
   height: 30px;
 }
 .preview-banner {
+  a {
+    background-color: $gray2-light;
+    border: 2px solid $accent-light;
+    z-index: 1;
+    padding: 15px;
+    border-radius: 50px;
+  }
   .download {
     position: absolute;
     bottom: 10px;
@@ -12,5 +19,11 @@
   }
   img {
     max-width: 100%;
+  }
+}
+.dark {
+  a {
+    background-color: $gray2-dark;
+    border: 2px solid $accent-dark;
   }
 }

@@ -202,3 +202,15 @@ input[type="color"]::-webkit-color-swatch {
 .extra-p {
   margin-bottom: 16px;
 }
+
+.form-control:focus {
+  color: inherit;
+  border-color: inherit;
+  box-shadow: 0 0px 50px -10px rgba($color: $accent-light, $alpha: 0.3);
+}
+
+.dark {
+  .form-control:focus {
+    box-shadow: 0 0px 50px -10px rgba($color: $accent-dark, $alpha: 0.3);
+  }
+}

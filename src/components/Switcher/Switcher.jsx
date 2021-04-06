@@ -189,7 +189,7 @@ const Switcher = () => {
   }, []);
 
   return (
-    <label className="theme-switcher mb-0" htmlFor="color-theme">
+    <label className="theme-switcher mb-0 hoverable" htmlFor="color-theme">
       <input className="color-theme" defaultChecked={theme === 'dark'} type="checkbox" name="color-theme" id="color-theme" onChange={handleChangeTheme} />
       <span className="theme-switcher-slider">
         <span className="theme-switcher-icon sun">

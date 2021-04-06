@@ -42,6 +42,7 @@ const GeneratorForm = () => {
                 placeholder="Width"
                 isInvalid={!!errors.width}
                 defaultValue={image.width}
+                className="hoverable"
                 {...register(
                   'width',
                   {
@@ -70,6 +71,7 @@ const GeneratorForm = () => {
                 placeholder="Height"
                 isInvalid={!!errors.height}
                 defaultValue={image.height}
+                className="hoverable"
                 {...register(
                   'height',
                   {
@@ -97,6 +99,7 @@ const GeneratorForm = () => {
                 as="select"
                 placeholder="Format"
                 isInvalid={!!errors.format}
+                className="hoverable"
                 {...register(
                   'format',
                   {
@@ -127,6 +130,7 @@ const GeneratorForm = () => {
                 placeholder="Text"
                 defaultValue={image.text}
                 isInvalid={!!errors.text}
+                className="hoverable"
                 {...register(
                   'text',
                   {
@@ -153,6 +157,7 @@ const GeneratorForm = () => {
                 placeholder="Font Size"
                 isInvalid={!!errors.fontSize}
                 defaultValue={image.fontSize}
+                className="hoverable"
                 {...register(
                   'fontSize',
                   {
@@ -232,7 +237,7 @@ const GeneratorForm = () => {
           </Col>
           <Col xs="12" md="4">
             <div className="d-flex justify-content-center align-items-center extra-p mt-5 mt-md-0">
-              <button className="btn btn-5 btn-5a bold text-base-inv-light bg-inverted-light" type="submit">
+              <button className="btn btn-5 btn-5a bold text-base-inv-light bg-inverted-light hoverable" type="submit">
                 <span>Generate Image</span>
               </button>
             </div>
