@@ -22,8 +22,10 @@
   }
 }
 .dark {
-  a {
-    background-color: $gray2-dark;
-    border: 2px solid $accent-dark;
+  .preview-banner {
+    a {
+      background-color: $gray2-dark;
+      border: 2px solid $accent-dark;
+    }
   }
 }

@@ -118,8 +118,8 @@ export default function RecommendationsPage() {
       <Container className="mt-5">
         <Row>
           <Col xs="12">
-            <h1 className="text-accent-light bold mb-4">Recommendations</h1>
-            <p className="p-lg mb-5">
+            <h1 className="h2 text-accent-light bold mb-4">Recommendations</h1>
+            <p className="p-md mb-5">
               The dimensions of the images depend on the amount of space you need to occupy on the screen.
               Header or full screen images will always be much larger than logo images, for example.
               There are no set rules, but as a general rule, you can look at this list of sizes according to the different elements on the screen:

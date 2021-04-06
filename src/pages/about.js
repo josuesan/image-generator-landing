@@ -75,12 +75,12 @@ export default function AboutPage() {
       <Container className="mt-5">
         <Row>
           <Col xs="12">
-            <h1 className="text-accent-light bold mb-4">About Us</h1>
-            <p className="p-lg">Image generator that allows you to create test images (fake images, placeholder images) in a customized way in which we can modify the color, the text, its size.</p>
-            <p className="p-lg">This tool aims to help programmers, designers, layout designers, among others, to save time in their projects, by using Image Generator to create their mockups, MVP with our images quickly and easily. </p>
-            <p className="p-lg mb-4">This project has been developed by Josue Sanchez with a lot of love. New features will be included soon to improve the user experience. </p>
+            <h1 className="h2 text-accent-light bold mb-4">About Us</h1>
+            <p className="p-md">Image generator that allows you to create test images (fake images, placeholder images) in a customized way in which we can modify the color, the text, its size.</p>
+            <p className="p-md">This tool aims to help programmers, designers, layout designers, among others, to save time in their projects, by using Image Generator to create their mockups, MVP with our images quickly and easily. </p>
+            <p className="p-md mb-4">This project has been developed by Josue Sanchez with a lot of love. New features will be included soon to improve the user experience. </p>
 
-            <h2 className="h1 text-accent-light bold mb-4">Frequently Asked Questions</h2>
+            <h2 className="h2 text-accent-light bold mb-4">Frequently Asked Questions</h2>
             <Accordion defaultActiveKey="0">
               {faqs.map((elem, i) => (
                 <div key={elem.id}>
