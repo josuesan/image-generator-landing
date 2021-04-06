@@ -22,7 +22,6 @@ const CookiesModal = ({ initAnalitics }) => {
     setCookie('technical', { technical: true }, { path: '/' });
     setShow(false);
   };
-
   return (
     <Modal centered size="md" show={show} onHide={handleAcceptCookies} className="modal-cookies-form">
       <Modal.Body className="p-3">
